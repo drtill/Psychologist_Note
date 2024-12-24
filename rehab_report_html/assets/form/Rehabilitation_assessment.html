@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REHABILITATION ASSESSMENT</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+    <div class="no-print">
+        <button id="btn_print" class="btn btn-success">Print</button>
+        <button>Save Draft</button>
+        <button>Save Final</button>
+        <button>History</button>
+    </div>
+
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="/image/samitivej_full.png" alt="Logo" class="logo" width="70%">
+            <span class="title"><em>OPD ASSESSMENT FORM (ADULT)</em></span>
+        </div>
+
+        <form id="header-report" style="margin-top:0px">
+            <div class="form-group" style="line-height:10px;">
+                Name: <input type="text" id="name" name="FullName" class="inline-text" style="font-size: 12px;">
+            </div>
+            <div class="form-group" style="line-height:20px;">
+                HN: <input type="text" id="hn" name="HN" class="inline-text" style="font-size: 12px;width: 40%;">
+                DOB: <input type="text" id="dob" name="Formatted_DOB" class="inline-text"
+                    style="font-size: 12px;width: 50%;">
+                Age: <input type="text" id="age" name="Age" class="inline-text" style="font-size: 12px;width: 10%;">Y
+            </div>
+            <div class="form-group" style="line-height:20px;">
+                Department: <input type="text" id="department" name="LOC_DESC_MAIN" class="inline-text"
+                    style="font-size: 12px;width: 40%;">
+                Date: <input type="text" id="date" name="ADM_DATE_BASE" class="inline-text"
+                    style="font-size: 12px;width: 40%;">
+                Time: <input type="text" id="time" name="ADM_TIME" class="inline-text"
+                    style="font-size: 12px;width: 15%;">
+            </div>
+            <div class="form-group">
+                Physician: <input type="text" id="physician" name="CTPCP_StName" class="inline-text"
+                    style="font-size: 12px;">
+            </div>
+        </form>
+    </div>
+    <div id="content-form" class="content">
+        <form id="allergy-report" style="margin-top:10px">
+            <div class="row">
+                <div class="col-3">
+                    <!-- Drug Section -->
+                    <div class="form-group">
+                        <strong>Allergy:</strong> <label for="drug-nka" style="margin-left: 20px;"> Drug:</label>
+                        <input type="checkbox" id="drug-nka" name="HXDA" value="NKA" style="margin-left: 10px;">NKA
+                        <input type="checkbox" id="drug-yes" name="HXDA" value="Yes" style="margin-left: 20px;"> Yes
+                        <input type="text" id="drug-details" class="inline-text"
+                            style="margin-left: 10px;text-align: left;">
+                    </div>
+
+                    <!-- Food Section -->
+                    <div class="form-group" style="margin-left: 64px;">
+                        <label for="food-nka">Food:</label>
+                        <input type="checkbox" id="food-nka" name="HXFA" value="NKA" style="margin-left: 10px;"> NKA
+                        <input type="checkbox" id="food-yes" name="HXFA" value="YES" style="margin-left: 20px;"> Yes
+                        <input type="text" id="food-details" class="inline-text"
+                            style="margin-left: 10px;text-align: left;">
+                        <label for="other-allergy" style="margin-left: 20px;">Other:</label>
+                        <input type="text" id="other-allergy" class="inline-text"
+                            style="margin-left: 10px;text-align: left;">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form id="ChiefComplaint" style="margin-top:10px">
+            <div class="box">
+                <div class="form-group">
+                    <strong>Status on arrival</strong>
+                    <input type="checkbox" id="Walk" name="Status" value="01" style="margin-left: 10px;"> Walk
+                    <input type="checkbox" id="Wheelchair" name="Status" value="02" style="margin-left: 10px;">
+                    Wheelchair
+                    <input type="checkbox" id="drug-yes" name="Status" value="03" style="margin-left: 10px;">
+                    Stretcher
+
+                    <label for="Weight" style="margin-left: 8px;"><b>BW</b></label>
+                    <input type="text" id="Weight" name="WEIGHT" class="inline-text" style="width:50px;"> <label
+                        style="font-size: 10px;">kgs.</label>
+                    <label for="other-allergy" style="margin-left: 8px;"><b>Ht</b></label>
+                    <input type="text" id="Height" name="HEIGHT" class="inline-text" style="width:50px;"> <label
+                        style="font-size: 10px;">cms.</label>
+                    <label for="other-allergy" style="margin-left: 8px;"><b>BMI</b></label>
+                    <input type="text" id="BMI" name="BMI" class="inline-text" style="width:50px;"> <label
+                        style="font-size: 10px;">kg/m2</label>
+                </div>
+                <div class="form-group">
+                    <strong>Chif Complaint</strong>
+                    <input type="text" id="Chif-Complaint" name="Chif-Complaint" class="inline-text"
+                        style="width:80%;margin-left: 10px;text-align: left;">
+                </div>
+                <div class="form-group">
+                    <strong>BT</strong>
+                    <input type="text" id="BT" name="VS5" class="inline-text" style="width:5%;">°C
+                    <strong style="margin-left: 9px;">BP</strong>
+                    <input type="text" id="BP1" name="VS1" class="inline-text" style="width:5%;">/<input type="text"
+                        id="BP2" name="VS2" class="inline-text" style="width:5%;">
+                    <label style="font-size: 10px;">mmHg.</label>
+                    <strong style="margin-left: 9px;">PR</strong>
+                    <input type="text" id="PR" name="VS3" class="inline-text" style="width:5%;">/min.
+                    <strong style="margin-left: 9px;">RR</strong>
+                    <input type="text" id="RR" name="VS4" class="inline-text" style="width:5%;">/min.
+                    <strong style="margin-left: 9px;">O2 Sat</strong>
+                    <input type="text" id="o2sat" name="VS6" class="inline-text" style="width:5%;">%
+                </div>
+                <div class="form-group">
+                    <strong>Pain Score</strong>
+                    <input type="text" id="PS" name="PS" class="inline-text" style="width:5%;text-align: center;">(0-10)
+                    <strong style="margin-left: 9px;">Pain Location</strong>
+                    <input type="text" id="PAINLOC" name="PAINLOC" class="inline-text"
+                        style="width:20%;text-align: left;margin-left: 5px;">
+                </div>
+                <div class="form-group">
+                    <label for="Assessedby"><b>Assessed by</b></label>
+                    <input type="checkbox" id="Assess01" name="Assess" value="01" style="margin-left: 10px;"> NRS
+                    <input type="checkbox" id="Assess02" name="Assess" value="02" style="margin-left: 10px;">
+                    FRS
+                    <input type="checkbox" id="Assess03" name="Assess" value="03" style="margin-left: 10px;">
+                    FLACC
+                    <input type="checkbox" id="Assess04" name="Assess" value="04" style="margin-left: 10px;">
+                    NPS
+                    <input type="checkbox" id="Assess05" name="Assess" value="05" style="margin-left: 10px;">
+                    BPS
+                    <input type="checkbox" id="Assess06" name="Assess" value="06" style="margin-left: 10px;">
+                    PPS
+                </div>
+                <div class="form-group">
+                    <strong>Fall risk: </strong>
+                    <input type="checkbox" id="Fall-risk-no" name="FR" value="No" style="margin-left: 10px;"> No
+                    <input type="checkbox" id="Fall-risk-yes" name="FR" value="Yes" style="margin-left: 10px;">
+                    Yes,area of risk
+                    <input type="text" id="Yes_text" name="O2sat" class="inline-text"
+                        style="width:15%;text-align: left;margin-left: 5px;">
+
+                    <label for="other-allergy" style="margin-left: 8px;"><b>Abuse or Neglect Risk</b></label>
+                    <input type="checkbox" id="drug-nka" name="drug-allergy" value="NO" style="margin-left: 10px;"> No
+                    <input type="checkbox" id="drug-yes" name="drug-allergy" value="YES" style="margin-left: 10px;">
+                    Yes,(notify doctor)
+                </div>
+                <div class="form-group">
+                    <label for="Assessedby"><b>Psychological problem</b></label>
+                    <input type="checkbox" id="drug-nka" name="Assessedby" value="Negative"
+                        style="margin-left: 10px;">Negative
+                    <input type="checkbox" id="drug-yes" name="Assessedby" value="Positive"
+                        style="margin-left: 10px;">Positive (notify doctor)
+                </div>
+                <div class="form-group">
+                    <label><b>Triage Level</b></label>
+                    <input type="checkbox" id="Triage1" name="Triage" value="esi1" style="margin-left: 10px;">1
+                    (Resusciation)
+                    <input type="checkbox" id="Triage2" name="Triage" value="esi2" style="margin-left: 10px;">2
+                    (Emergent)
+                    <input type="checkbox" id="Triage3" name="Triage" value="esi3" style="margin-left: 10px;">3
+                    (Urgent)
+                    <input type="checkbox" id="Triage4" name="Triage" value="esi4" style="margin-left: 10px;">4
+                    (Semi-urgent)
+                    <input type="checkbox" id="Triage5" name="Triage" value="esi5" style="margin-left: 10px;">5
+                    (Non-urgent)
+                </div>
+                <div class="form-group" style="margin-left: 200px;margin-top: 10px;">
+                    <label for="assessor"><b>Assessor</b></label>
+                    <input type="text" id="assessor" name="assessor" class="inline-text"
+                        style="width:20%;margin-left: 5px;text-align: left;">
+                    RN/MD/Profressional staff
+                </div>
+            </div>
+        </form>
+
+        <h1>Physical Therary Note</h1>
+        <form class="box">
+            <label for="diagnosis"><b>Date and time of Physical Therapy session :</b></label>
+            <textarea id="dateandtime" rows="1"></textarea>
+            <br>
+            <label for="Progresstion"><b>Progresstion : </b></label>
+            <textarea id="Progresstion" rows="1"></textarea>
+            <br>
+            <label for="Precautions"><b>Precautions and underlying disrases :</b></label>
+            <textarea id="Precautions" rows="1"></textarea>
+            <br>
+            <label for="Sensation"><b>Sensation Screening :</b></label>
+            <textarea id="Sensation" rows="1"></textarea>
+            <br>
+            <label for="Burnrisk"><b>Burn Risk Screening :</b></label>
+            <textarea id="Burnrisk" rows="1"></textarea>
+            <br>
+            <label for="Intervention"><b>Intervention :</b></label>
+            <textarea id="Intervention" rows="1"></textarea>
+            <br>
+            <label for="Subjective"><b>Subjective Examination :</b></label>
+            <textarea id="Subjective" rows="1"></textarea>
+            <br>
+            <label for="Physical"><b>Physical Examination :</b></label>
+            <textarea id="Physical" rows="1"></textarea>
+            <br>
+            <label for="Patient"><b>Patient and family needs :</b></label>
+            <textarea id="Patient" rows="1"></textarea>
+            <br>
+            <label for="Goals"><b>Goals of treatment :</b></label>
+            <textarea id="Goals" rows="1"></textarea>
+            <br>
+            <label for="Planning"><b>D/C Planning :</b></label>
+            <textarea id="Planning" rows="1"></textarea>
+            <br>
+            <label for="Treatment"><b>Treatment :</b></label>
+            <textarea id="Treatment" rows="1"></textarea>
+            <br>
+            <label for="Home"><b>Home programs :</b></label>
+            <textarea id="operation" rows="1"></textarea>
+            <br>
+
+            <div class="form-group">
+                <label for="Reassessment"><b>Reassessment: Pain Score =</b></label>
+                <textarea id="pain_score" rows="1" style="width: 40%;margin-left: 10px;"></textarea>
+            </div>
+
+            <div class="form-group" style="margin-left: 91px;">
+                <label for="Fall_risk"><b>Fall risk =</b></label>
+                <textarea id="Fall_risk" rows="1" style="width: 40%;margin-left: 10px;"></textarea>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/form.js"></script>
+    <script src="/js/resouce.js"></script>
+</body>
+
+</html>

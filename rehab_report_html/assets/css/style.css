@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-right: 100px;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    line-height: 20px;
+}
+
+.inline-text {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 1px 1px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    text-align: center;
+}
+
+
+.inline-text:focus {
+    border-bottom: 1px solid #007bff;
+}
+
+.box {
+    border: 2px solid #9c9c9c;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    width: 98%;
+    overflow: hidden;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    height: 20px;
+    line-height: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+textarea:focus {
+    border-bottom: 1px solid #007bff;
+    outline: none;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+@media print {
+    @page {
+        size: A4;
+        padding-bottom: 20px; 
+    }
+
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+
+    .header-container {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        width: 95%;
+        height: 100px;
+        padding: 5px;
+        z-index: -1000; 
+    }
+
+    body {
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 90px; 
+    }
+
+    .content {
+        padding-top: 60px; 
+        page-break-before: always; 
+    }
+
+    .content:first-of-type {
+        padding-top: 10px; 
+    }
+
+    .content:not(:first-of-type) {
+        padding-top: 10px; 
+    }
+
+    .content:after {
+        page-break-before: always;
+        height: 0;
+    }
+}
+
